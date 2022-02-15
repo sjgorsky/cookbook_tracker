@@ -1,11 +1,10 @@
-class CreateBook < ActiveRecord::Migration[6.1]
+class Books < ActiveRecord::Migration[6.1]
   def change
     create_table :books do |t|
       t.string :title
       t.string :author
-      t.string :rating
+      t.integer :rating
 
       t.timestamps
     end
-  end
 end

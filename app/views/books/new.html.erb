@@ -1,0 +1,13 @@
+<h1>Add a book</h1>
+
+<%= form_with(model: @book, local: true) do |form| %>
+  <%= form.label "Book Title:" %>
+  <%= form.text_field(:title) %>
+
+  <%= form.label "Author:" %>
+  <%= form.text_field(:author) %>
+
+  <%= form.label "Rating:" %>
+  <%= form.text_field(:rating) %>
+  <%= form.submit "Submit" %>
+<% end %>

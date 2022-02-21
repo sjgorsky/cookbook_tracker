@@ -17,12 +17,15 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
+        <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
         <nav>
           <ul class="nav navbar-nav">
-            <li><%= link_to "Home",    root_path %></li>
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-            <li class="navbar-right"><%= link_to "Log in", '#' %></li>
+            <li><%= link_to "Home",           root_path %></li>
+            <li><%= link_to "About",          about_path %></li>
+            <li><%= link_to "Contact",        contact_path %></li>
+            <li><%= link_to "Add a Cookbook", new_path %></li>
           </ul>
         </nav>
       </div>
@@ -30,5 +33,6 @@
     <div class="container">
       <%= yield %>
     </div>
+    <%= image_tag("recipe_books_header.png", alt: "Row of cookbooks") %>
   </body>
 </html>

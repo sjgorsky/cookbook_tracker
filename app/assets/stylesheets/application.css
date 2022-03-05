@@ -1,3 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+h1 {
+  text-transform: lowercase;
+}
+
+table {
+  table-layout: fixed;
+  margin: 20px;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: justify;
+  font-weight: 700;
+}

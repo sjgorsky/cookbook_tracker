@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.order(params[:sort])
   end
 
   def new
@@ -10,11 +10,17 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      flash[:info] = "Book successfully added to shelf."
-      redirect_to new_url
+      flash[:success] = "Book successfully added to shelf."
+      redirect_to books_url
     else
       render 'new'
+      flash[:alert] = "Title and author cannot be empty"
     end
+  end
+
+
+  def show
+
   end
 
   private

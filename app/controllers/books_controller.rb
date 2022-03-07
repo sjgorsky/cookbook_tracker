@@ -3,6 +3,10 @@ class BooksController < ApplicationController
     @books = Book.order(params[:sort])
   end
 
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def new
     @book = Book.new
   end
@@ -12,15 +16,26 @@ class BooksController < ApplicationController
     if @book.save
       flash[:success] = "Book successfully added to shelf."
       redirect_to books_url
+      binding.pry
     else
       render 'new'
       flash[:alert] = "Title and author cannot be empty"
     end
   end
 
+  def edit
+    @book = Book.find(params[:id])
+  end
 
-  def show
+  def update
+    @book = Book.find(params[:id])
 
+    if @book.update(book_params)
+      flash[:success] = "Book updated."
+      redirect_to @book 
+    else
+      render :edit, status: unprocessable_entity
+    end
   end
 
   private

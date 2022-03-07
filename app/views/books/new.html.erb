@@ -1,13 +1,3 @@
 <h1>Add a book</h1>
 
-<%= form_with(model: @book, local: true) do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field(:title) %>
-
-  <%= form.label :author %>
-  <%= form.text_field(:author) %>
-
-  <%= form.label :rating %>
-  <%= form.text_field(:rating) %>
-  <%= form.submit "Add to Shelf", class: "button" %>
-<% end %>
+<%= render "form", book: @book %>

@@ -16,7 +16,6 @@ class BooksController < ApplicationController
     if @book.save
       flash[:success] = "Book successfully added to shelf."
       redirect_to books_url
-      binding.pry
     else
       render 'new'
       flash[:alert] = "Title and author cannot be empty"

@@ -1,24 +1,11 @@
-# README
+# FeedReads
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a side project to build a CRUD app in Ruby on Rails v6.1.
 
-Things you may want to cover:
+Goals include:
 
-* Ruby version
+* Basic CRUD functionality
 
-* System dependencies
+* Building a relational database
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Definitely-not-pretty-but-not-too-ugly front end 

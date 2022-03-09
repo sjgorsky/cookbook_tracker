@@ -4,5 +4,9 @@
 <p><%= @book.rating %></p>
 
 <ul>
-  <li><%= link_to "Edit", edit_book_path(@book) %></li>
+  <li class="button"><%= link_to "Edit", edit_book_path(@book) %></li>
+  <li class="button"><%= link_to "Destroy", book_path(@book), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
 </ul>

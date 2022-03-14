@@ -8,5 +8,10 @@
   <li class="button"><%= link_to "Destroy", book_path(@book), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
-                  } %></li>
+                  } %></li>                    
 </ul>
+
+# try removing resources, manually add all routes
+# resources only: show, edit, create (look up syntax)
+# match up route#controller action matches method name
+# might need to get rid of link_to (magic stuff with turbo method?!)
